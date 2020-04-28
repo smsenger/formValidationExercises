@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <title>Sign-Up Form</title>
+</head>
+<body>
+    <div class="form-field">
+        <form method="GET">
+            <div>
+            <div class="form-group">
+                <label>Name</label>      <!-- if entered incorrectly, will not accept correct entry w/o reload -->
+                <input 
+                    class="form-control"
+                    type="text" 
+                    title="Name"
+                    id="name" 
+                    name="name" 
+                    required 
+                    minlength="2" 
+                    maxlength="6" 
+                    oninvalid="this.setCustomValidity('WHAT IS YOUR NAME.')">
+            </div>
+
+            <div class="form-group">
+                <label></label>Password</label>
+                <input 
+                    class="form-control"
+                    type="password" 
+                    title="Password"
+                    id="password" 
+                    name="password" 
+                    required 
+                    minlength="6" 
+                    maxlength="15" 
+                    oninvalid="this.setCustomValidity('Enter code name, STAT!')">          
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input 
+                    class="form-control"
+                    type="email" 
+                    title="email"
+                    id="email" 
+                    name="email" 
+                    required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                    placeholder="username@email.com"
+                    oninvalid="this.setCustomValidity('No, like this: something@something.com')">
+            </div>
+
+            <div class="form-group">
+                <label>What's on your mind?</label>
+                <textarea 
+                    class= "form-control"
+                    name="comment" 
+                    title="Tell your story to the world."
+                    form="usrform" 
+                    maxlength="250"
+                    rows="4" 
+                    cols="50" 
+                    placeholder="What's on your mind?">
+                </textarea>
+            </div>
+
+            <div>
+                <label>Turing Test</label>
+                <input 
+                    class= "form-control"
+                    id="regex" 
+                    type="text" 
+                    pattern="Not a robot"
+                    title="Not a robot"
+                    placeholder="Not a robot"
+                    oninvalid="this.setCustomValidity('Please enter the placeholder message, human.')">
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </div>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+
+.body-image {
+    background-image: url("background.jpg");
+    /* background-size: 100%; */
+}
+
+.form-field {
+    background-color: white;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+    font-size: 120%;
+    margin-left: 5%;
+}
+
+input[type="text"], 
+input[name="password"], 
+input[name="email"], 
+textarea[name="comment"] {
+    width: 70vw;
+    margin-left: 5%;
+    border: 3px solid white;
+}
+
+input:invalid {
+    background-color: #4bd9b3;
+}
+
+button[type="submit"] {
+    background-color: #4bd9b3;
+    color: #cc200a;
+    font-weight: bold;
+    width: 20vw;
+    margin-left: 5%;
+    border: 3px solid white;
+}
